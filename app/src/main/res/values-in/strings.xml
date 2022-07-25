@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">StoryApp</string>
+    <string name="powered_by_elan">Didukung oleh Elan</string>
+    <string name="welcome_back">Selamat Datang Kembali,</string>
+    <string name="email_address">Alamat Email</string>
+    <string name="login">Masuk</string>
+    <string name="sign_up">Daftar</string>
+    <string name="don_t_have_an_account">Tidak memiliki akun?</string>
+    <string name="log_in_now_to_continue">Masuk sekarang untuk melanjutkan</string>
+    <string name="password">Kata sandi</string>
+    <string name="let_s_join_us">Ayo Bergabung Bersama Kami,</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="register">Registrasi</string>
+    <string name="share_your_moment_with_us">Bagikan momen kamu bersama kami</string>
+    <string name="add_description">Tambah Deskripsi</string>
+    <string name="take_from_gallery">Galeri</string>
+    <string name="take_a_picture">Kamere</string>
+    <string name="add_story">Tambah Cerita</string>
+    <string name="success_updates_story">Berhasil menambahkan cerita</string>
+    <string name="no_image_added">Belum ada gambar yang ditambhakan</string>
+    <string name="empty_data">Tidak ada data untuk ditampilkan</string>
+    <string name="language">Bahasa</string>
+    <string name="settings">Pengaturan</string>
+    <string name="input_address">Masukkan email anda</string>
+    <string name="error_email">Masukkan dengan email format</string>
+    <string name="input_password">Masukkan kata sandi anda</string>
+    <string name="error_password">Masukkan 6 digit kata sandi</string>
+    <string name="input_username">Masukkan username anda</string>
+    <string name="logout">Keluar</string>
+</resources>

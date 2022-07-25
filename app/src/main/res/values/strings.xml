@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name" translatable="false">StoryApp</string>
+    <string name="powered_by_elan">Powered By Elan</string>
+    <string name="welcome_back">Welcome Back,</string>
+    <string name="email_address">Email Address</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="log_in_now_to_continue">Log in now to continue</string>
+    <string name="password">Password</string>
+    <string name="let_s_join_us">Let\'s Join Us,</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="share_your_moment_with_us">Share your moment with us</string>
+    <string name="add_description">Add description</string>
+    <string name="take_from_gallery">Gallery</string>
+    <string name="take_a_picture">Camera</string>
+    <string name="add_story">Add Story</string>
+    <string name="success_updates_story">Success add new story</string>
+    <string name="no_image_added">No image added yet</string>
+    <string name="empty_data">No data to display</string>
+    <string name="language">Language</string>
+    <string name="settings">Settings</string>
+    <string name="input_address">Enter your email address</string>
+    <string name="error_email">Enter with email format</string>
+    <string name="input_password">Enter your password</string>
+    <string name="error_password">Enter 6 digit password</string>
+    <string name="input_username">Enter your username</string>
+    <string name="logout">Logout</string>
+</resources>
