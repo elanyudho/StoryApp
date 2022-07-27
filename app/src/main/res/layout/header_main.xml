@@ -21,11 +21,11 @@
         tools:text="Hi, Elan" />
 
     <ImageView
-        android:id="@+id/btn_add_story"
+        android:id="@+id/btn_maps"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_add_story"
+        android:src="@drawable/ic_maps"
         app:layout_constraintBottom_toBottomOf="@+id/btn_setting"
         app:layout_constraintEnd_toStartOf="@+id/btn_setting"
         app:layout_constraintTop_toTopOf="@+id/btn_setting" />

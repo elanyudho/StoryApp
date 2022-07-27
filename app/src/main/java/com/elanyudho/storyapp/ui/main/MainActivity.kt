@@ -18,6 +18,7 @@ import com.elanyudho.storyapp.databinding.ActivityMainBinding
 import com.elanyudho.storyapp.ui.addstory.AddStoryActivity
 import com.elanyudho.storyapp.ui.detail.DetailActivity
 import com.elanyudho.storyapp.ui.main.adapter.StoriesAdapter
+import com.elanyudho.storyapp.ui.maps.MapsStoryActivity
 import com.elanyudho.storyapp.ui.settings.PreferenceFragment
 import com.elanyudho.storyapp.utils.extensions.gone
 import com.elanyudho.storyapp.utils.extensions.visible
@@ -49,6 +50,7 @@ class MainActivity : BaseActivityBinding<ActivityMainBinding>(),
         setStoriesPagination()
         setHeaderAction()
         setStoriesAction()
+        setFABAction()
 
     }
 
@@ -115,8 +117,8 @@ class MainActivity : BaseActivityBinding<ActivityMainBinding>(),
     private fun setHeaderAction() {
         with(binding) {
             headerMainStories.tvUsername.text = "Hi, ${session.user?.username}"
-            headerMainStories.btnAddStory.setOnClickListener {
-                resultLauncher?.launch(Intent(this@MainActivity, AddStoryActivity::class.java))
+            headerMainStories.btnMaps.setOnClickListener {
+                startActivity(Intent(this@MainActivity, MapsStoryActivity::class.java))
             }
             headerMainStories.btnSetting.setOnClickListener {
 
@@ -153,6 +155,12 @@ class MainActivity : BaseActivityBinding<ActivityMainBinding>(),
                 storiesAdapter.clearList()
                 mViewModel.getStories(1)
             }
+        }
+    }
+
+    private fun setFABAction() {
+        binding.fabAddStory.setOnClickListener {
+            resultLauncher?.launch(Intent(this@MainActivity, AddStoryActivity::class.java))
         }
     }
 
