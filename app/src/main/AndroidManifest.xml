@@ -54,7 +54,8 @@
         <activity
             android:name=".ui.maps.MapsStoryActivity"
             android:exported="false"
-            android:label="@string/title_activity_maps_story" />
+            android:label="@string/title_activity_maps_story"
+            android:theme="@style/Theme.StoryApp.ClearScreen"/>
         <activity
             android:name=".ui.addstory.AddStoryActivity"
             android:exported="false"

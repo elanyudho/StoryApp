@@ -28,6 +28,11 @@ class RemoteDataSource
             api.getStories(page)
         }
 
+    suspend fun getStoriesLocation(): Either<Failure, StoryListResponse> =
+        request {
+            api.getStoriesLocation()
+        }
+
     suspend fun postAddStory(photoStory: MultipartBody.Part, desc: RequestBody): Either<Failure, DefaultResponse> = request {
         api.postStory(photoStory,desc)
     }

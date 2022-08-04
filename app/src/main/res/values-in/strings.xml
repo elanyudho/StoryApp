@@ -28,4 +28,6 @@
     <string name="error_password">Masukkan 6 digit kata sandi</string>
     <string name="input_username">Masukkan username anda</string>
     <string name="logout">Keluar</string>
+    <string name="title_activity_maps_story">MapsStoryActivity</string>
+    <string name="try_again">Coba Lagi</string>
 </resources>

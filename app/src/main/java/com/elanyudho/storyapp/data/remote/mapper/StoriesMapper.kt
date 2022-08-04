@@ -13,7 +13,9 @@ class StoriesMapper : BaseMapper<StoryListResponse, List<Story>> {
                 username = it.name,
                 createdAt = it.createdAt,
                 id = it.id,
-                description = it.description
+                description = it.description,
+                long = it.lon,
+                lat = it.lat
             )
         }
     }

@@ -30,6 +30,15 @@ interface ApiService {
         @Query("page") page: String
     ): Response<StoryListResponse>
 
+    @GET("stories")
+    suspend fun getStoriesPaging(
+        @Query("page") page: Int,
+        @Query("size") size: Int
+    ): StoryListResponse
+
+    @GET("stories?location=1")
+    suspend fun getStoriesLocation(): Response<StoryListResponse>
+
     @Multipart
     @POST("stories")
     suspend fun postStory(

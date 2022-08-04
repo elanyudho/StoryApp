@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_marker_view"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:background="@drawable/ic_marker">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_marker"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitleHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitleHeader"
+        app:shapeAppearanceOverlay="@style/Theme.StoryApp.CircleImageView"
+        tools:srcCompat="@drawable/ic_launcher_background" />
+</FrameLayout>

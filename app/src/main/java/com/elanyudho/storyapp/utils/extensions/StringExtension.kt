@@ -35,25 +35,21 @@ fun String.convertDate(): String {
         val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
         val pasTime = dateFormat.parse(localTime)
         val nowTime = Date()
-        var dateDiff = nowTime.time - pasTime.time
-        dateDiff = if (dateDiff < 0) {
-            0
-        } else {
-            nowTime.time - pasTime.time
-        }
+        var dateDiff =  nowTime.time - pasTime.time
+
         val second: Long = TimeUnit.MILLISECONDS.toSeconds(dateDiff)
         val minute: Long = TimeUnit.MILLISECONDS.toMinutes(dateDiff)
         val hour: Long = TimeUnit.MILLISECONDS.toHours(dateDiff)
         val day: Long = TimeUnit.MILLISECONDS.toDays(dateDiff)
         when {
             second < 60 -> {
-                convTime = "$second Seconds $suffix"
+                convTime = "Today"
             }
             minute < 60 -> {
-                convTime = "$minute Minutes $suffix"
+                convTime = "Today"
             }
             hour < 24 -> {
-                convTime = "$hour Hours $suffix"
+                convTime = "Today"
             }
             day >= 7 -> {
                 convTime = if (day > 360) {

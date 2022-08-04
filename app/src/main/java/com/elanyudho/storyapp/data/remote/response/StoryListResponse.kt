@@ -19,9 +19,9 @@ data class StoryListResponse(
         @SerializedName("id")
         val id: String = "",
         @SerializedName("lat")
-        val lat: Any? = Any(),
+        val lat: Double? = 0.0,
         @SerializedName("lon")
-        val lon: Any? = Any(),
+        val lon: Double? = 0.0,
         @SerializedName("name")
         val name: String = "",
         @SerializedName("photoUrl")

@@ -4,6 +4,8 @@ import com.elanyudho.storyapp.domain.repository.AuthRepository
 import com.elanyudho.storyapp.domain.repository.StoryRepository
 import com.elanyudho.storyapp.domain.usecase.auth.GetLoginUseCase
 import com.elanyudho.storyapp.domain.usecase.auth.GetRegisterUseCase
+import com.elanyudho.storyapp.domain.usecase.stories.GetStoriesLocationUseCase
+import com.elanyudho.storyapp.domain.usecase.stories.GetStoriesPagingUseCase
 import com.elanyudho.storyapp.domain.usecase.stories.GetStoriesUseCase
 import com.elanyudho.storyapp.domain.usecase.stories.PostStoryUseCase
 import dagger.Module
@@ -31,4 +33,12 @@ object UseCaseModule {
     @Provides
     @ActivityScoped
     fun providePostStoryUseCase(repository: StoryRepository) = PostStoryUseCase(repository)
+
+    @Provides
+    @ActivityScoped
+    fun providePostStoryLocationUseCase(repository: StoryRepository) = GetStoriesLocationUseCase(repository)
+
+    @Provides
+    @ActivityScoped
+    fun providePagingStoriesUseCase(repository: StoryRepository) = GetStoriesPagingUseCase(repository)
 }
