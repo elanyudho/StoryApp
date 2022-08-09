@@ -27,7 +27,7 @@ fun String.convertDate(): String {
         val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
         val localTime: String = LocalDateTime.parse(this, formatter)
             .atOffset(ZoneOffset.UTC)
-            .atZoneSameInstant(ZoneId.of("Asia/Jakarta"))
+            .atZoneSameInstant(ZoneId.systemDefault())
             .format(formatter)
 
 
@@ -35,7 +35,7 @@ fun String.convertDate(): String {
         val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
         val pasTime = dateFormat.parse(localTime)
         val nowTime = Date()
-        var dateDiff =  nowTime.time - pasTime.time
+        var dateDiff =  if(nowTime.time - pasTime.time < 0) { 0 } else {nowTime.time - pasTime.time}
 
         val second: Long = TimeUnit.MILLISECONDS.toSeconds(dateDiff)
         val minute: Long = TimeUnit.MILLISECONDS.toMinutes(dateDiff)
@@ -43,13 +43,13 @@ fun String.convertDate(): String {
         val day: Long = TimeUnit.MILLISECONDS.toDays(dateDiff)
         when {
             second < 60 -> {
-                convTime = "Today"
+                convTime = "$second Seconds $suffix"
             }
             minute < 60 -> {
-                convTime = "Today"
+                convTime = "$minute Minutes $suffix"
             }
             hour < 24 -> {
-                convTime = "Today"
+                convTime = "$hour Hours $suffix"
             }
             day >= 7 -> {
                 convTime = if (day > 360) {

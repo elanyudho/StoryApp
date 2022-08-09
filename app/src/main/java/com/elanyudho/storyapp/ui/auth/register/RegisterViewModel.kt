@@ -19,7 +19,7 @@ class RegisterViewModel @Inject constructor(
 
     sealed class RegisterUiState {
         object Loading : RegisterUiState()
-        data class Success(val register: Register) : RegisterUiState()
+        data class Success(val body: Register) : RegisterUiState()
         data class Failed(val failure: Failure) : RegisterUiState()
     }
 

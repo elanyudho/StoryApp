@@ -44,7 +44,7 @@ class LoginActivity : BaseActivityBinding<ActivityLoginBinding>(),
     override fun onChanged(state: LoginViewModel.LoginUiState?) {
         when (state) {
             is LoginViewModel.LoginUiState.Success -> {
-                saveStateUser(state.user)
+                saveStateUser(state.body)
             }
             is LoginViewModel.LoginUiState.Loading -> {
                startLoadingView()

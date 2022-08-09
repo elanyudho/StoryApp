@@ -35,7 +35,7 @@ class PagingStoriesAdapter :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: StoryListResponse.Story) {
             with(binding) {
-                Log.d("dataku", data.toString())
+                Log.d("DATAPAGING", data.toString())
                 tvUsername.text = data.name
                 tvCreatedDate.text = data.createdAt.convertDate()
                 ivStory.glide(itemView, data.photoUrl)
