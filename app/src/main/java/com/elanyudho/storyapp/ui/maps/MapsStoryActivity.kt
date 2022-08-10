@@ -63,7 +63,7 @@ class MapsStoryActivity : BaseActivityBinding<ActivityMapsStoryBinding>(), Obser
     override fun onChanged(state: MapsStoryViewModel.MapsStoryUiState?) {
         when (state) {
             is MapsStoryViewModel.MapsStoryUiState.StoriesLoaded -> {
-                dataStories.invoke(state.stories)
+                dataStories.invoke(state.body)
             }
             is MapsStoryViewModel.MapsStoryUiState.Loading -> {
 

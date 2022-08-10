@@ -20,7 +20,7 @@ class AddStoryViewModel @Inject constructor(
 
     sealed class AddStoryUiState {
         object Loading: AddStoryUiState()
-        data class SuccessUpload(val stories: Nothing?): AddStoryUiState()
+        data class SuccessUpload(val body: Nothing?): AddStoryUiState()
         data class FailedUpload(val failure: Failure): AddStoryUiState()
     }
 

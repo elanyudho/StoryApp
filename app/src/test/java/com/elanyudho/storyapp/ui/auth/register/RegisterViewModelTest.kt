@@ -59,7 +59,7 @@ class RegisterViewModelTest {
     }
 
     @Test
-    fun `Testing getRegisterUseCase`() {
+    fun `GetRegisterUseCase Successfully`() {
         val expectedState = Either.Success(
             Register(
                 errorStatus = dummyRegister.error,
@@ -93,7 +93,7 @@ class RegisterViewModelTest {
 
     @OptIn(DelicateCoroutinesApi::class)
     @Test
-    fun `Register Successfully - Result Success`() {
+    fun `doRegister Successfully - Result Success`() {
         val expectedState = Either.Success(
             Register(
                 errorStatus = dummyRegister.error,

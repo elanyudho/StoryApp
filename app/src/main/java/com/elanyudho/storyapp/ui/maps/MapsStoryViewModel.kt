@@ -19,7 +19,7 @@ class MapsStoryViewModel @Inject constructor(
 ) : BaseViewModel<MapsStoryViewModel.MapsStoryUiState>() {
 
     sealed class MapsStoryUiState {
-        data class StoriesLoaded(val stories: List<Story>): MapsStoryUiState()
+        data class StoriesLoaded(val body: List<Story>): MapsStoryUiState()
         data class FailedLoadStories(val failure: Failure): MapsStoryUiState()
         data class Loading(val isLoading: Boolean): MapsStoryUiState()
     }

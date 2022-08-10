@@ -28,7 +28,7 @@ class MainViewModelTest {
     private lateinit var mainViewModel: MainViewModel
 
     @Test
-    fun `Get all stories successfully`()  {
+    fun `getStoriesPaging Successfully`()  {
         val observer = Observer<PagingData<StoryListResponse.Story>> {}
         try {
             val dummyStories = DummyData.generateDummyStoriesResponse()

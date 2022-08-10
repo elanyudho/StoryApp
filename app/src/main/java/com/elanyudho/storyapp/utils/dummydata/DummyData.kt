@@ -3,7 +3,9 @@ package com.elanyudho.storyapp.utils.dummydata
 import com.elanyudho.storyapp.data.remote.response.DefaultResponse
 import com.elanyudho.storyapp.data.remote.response.LoginResponse
 import com.elanyudho.storyapp.data.remote.response.StoryListResponse
+import com.elanyudho.storyapp.domain.model.Register
 import com.elanyudho.storyapp.domain.model.Story
+import com.elanyudho.storyapp.domain.model.User
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -66,10 +68,11 @@ object DummyData {
         )
     }
 
-    fun generateDummyRegisterResponse(): DefaultResponse {
-        return DefaultResponse(
-            error = false,
-            message = "success"
+    fun generateDummyLogin(): User {
+        return User(
+            userId = "user-mcrwFgIbC4Wgqz7-",
+            username = "elanyudho",
+            token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLW1jcndGZ0liQzRXZ3F6Ny0iLCJpYXQiOjE2NTk3ODg0NDl9.l4L1knlQemzJzgi8NBcimlU0v9M_C8lej218USCRKdQ"
         )
     }
 
@@ -89,4 +92,23 @@ object DummyData {
             message = "success"
         )
     }
+
+    fun generateDummyRegisterResponse(): Register {
+        return Register(
+            errorStatus = false,
+            message = "success"
+        )
+    }
+
+    fun generateAuthLogin(): LoginAuth {
+        return LoginAuth(
+            email = "elanyudho@gmail.com",
+            password = "password"
+        )
+    }
+
+    data class LoginAuth(
+        val email: String,
+        val password: String
+    )
 }

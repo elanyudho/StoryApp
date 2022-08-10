@@ -58,7 +58,7 @@ class LoginViewModelTest {
     }
 
     @Test
-    fun `Testing loginUseCase`() {
+    fun `LoginUseCase Successfully`() {
         val expectedState = Either.Success(
             User(
                 dummyLogin.loginResult.userId,
@@ -91,7 +91,7 @@ class LoginViewModelTest {
 
     @OptIn(DelicateCoroutinesApi::class)
     @Test
-    fun `Login Successfully - Result Success`() {
+    fun `doLogin Successfully - Result Success`() {
         val expectedState = Either.Success(
             User(
                 dummyLogin.loginResult.userId,
